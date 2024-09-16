@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Base Label -->
+    <TextView
+        android:id="@+id/tvBaseLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:text="Base Amount"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Base Amount Input -->
+    <EditText
+        android:id="@+id/etBaseAmount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:hint="Enter amount"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvBaseLabel"
+        app:layout_constraintTop_toBottomOf="@+id/tvBaseLabel"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <!-- Tip Percent Label -->
+    <TextView
+        android:id="@+id/tvTipPercentLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tip: 15%"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textStyle="bold"
+        android:textColor="#0000FF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etBaseAmount" />
+
+    <!-- Tip SeekBar -->
+    <SeekBar
+        android:id="@+id/seekBarTip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvTipPercentLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTipPercentLabel"
+        app:layout_constraintWidth_percent="0.6" />
+
+    <!-- Tip Feedback Label -->
+    <TextView
+        android:id="@+id/tvTipFeedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Good"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#008000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seekBarTip" />
+
+    <!-- Tip Amount Label -->
+    <TextView
+        android:id="@+id/tvTipLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Tip"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipFeedback" />
+
+    <!-- Display Tip Amount -->
+    <TextView
+        android:id="@+id/tvTipAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/tvTipLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTipLabel" />
+
+    <!-- Total Amount Label -->
+    <TextView
+        android:id="@+id/tvTotalLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Total"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTipLabel" />
+
+    <!-- Display Total Amount -->
+    <TextView
+        android:id="@+id/tvTotalAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:text="0.00"
+        app:layout_constraintStart_toEndOf="@+id/tvTotalLabel"
+        app:layout_constraintTop_toTopOf="@+id/tvTotalLabel" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
